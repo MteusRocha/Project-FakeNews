@@ -4,15 +4,24 @@
     padding: 0;
     margin: 0;
 }
+/* Variable space */
+:root {
+    --white: #fff;
+    --red: #DE2F2F;
+    --hr-primary: left, #DE2F2F, #2b2b2b, #2b2b2b;
+    --Manrope: "Manrope", serif;
+    --marjor: "Major Mono Display", monospace;
+}
 
 body {
     background-color: #2b2b2b;
-    font-family: "Manrope", serif;
+    font-family: var(--Manrope);
 }
 
 p {
     font-weight: 300;
     line-height: 26px;
+    margin-top: 20px;
 }
 
 h1, h2 {
@@ -20,22 +29,22 @@ h1, h2 {
 }
 
 span {
-    color: #e65a5a;
+    color: var(--red);
 }
 
-h3, p, span {
+h3, p, span, li {
     font-size: 19px;
 }
 
 h1, h2, h3 {
     text-transform: uppercase;
     font-weight: 600;
+    margin-bottom: 30px;
 }
 
 p, h1, h2, h3, h4, ul, ol, a {
-    color: #fff;
+    color: var(--white);
 }
-
 
 li span {
     text-transform: uppercase;
@@ -44,15 +53,21 @@ li span {
 a {
     text-decoration: none;
     text-align: center;
+    font-size: 13px;
 }
 
 a:hover {
-    color: #EF4343;
+    color: var(--red);
     transition: 150ms;
 }
 
+hr {
+    border: 0; 
+    height: 2px;
+}
+
 iframe {
-    border: solid 2px #EF4343;
+    border: solid 2px var(--red);
     border-radius: 10px;
 }
 
@@ -87,131 +102,175 @@ main svg {
 }
 
 main .svg-item-gradient-1 {
-    margin-top: 194px;
-    height: 420px;
+    top: 280px;
+    height: 320px;
 }
 
 main .container {
-    padding: 130px;
-    margin-bottom: 70px;
+    padding: 90px 130px;
     overflow: hidden;
     display: flex;
 }
 
 main .container .text-content {
+    margin-top: 100px;
 }
 
 main .container .text-content .main-text {
-    margin-top: 48px;
-    padding: 10px;
+    padding: 20px 35px 40px 0px;
 }
 
-.section-text {
-    margin-top: 45px;
-    padding: 50px;
+main .container .text-content .main-text hr{
+    background-image: -webkit-linear-gradient(left, #DE2F2F, #2b2b2b, #2b2b2b);
+    background-image: -moz-linear-gradient(left, #DE2F2F, #2b2b2b, #2b2b2b);
+    background-image: -ms-linear-gradient(left, #DE2F2F, #2b2b2b, #2b2b2b);
+    background-image: -o-linear-gradient(left, #DE2F2F, #2b2b2b, #2b2b2b);
+}
+ 
+.impact-text {
+    font-family: var(--marjor);
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--white);
+    margin-top: 10px;
 }
 
-
-.section-player {
-    padding: 40px;
+.player-content {
     text-align: center;
 }
 
-.msg-content {
-    position: absolute;
-    margin-top: 125px;
-}
-
-.msg {
-    font-family: "Major Mono Display", monospace;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 10px;
-    text-align: start;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.cont-2 p {
-    margin: 35px 0px 35px 0px;
+.player-content .sub-title {
+    display: block;
 }
 
 main .svg-item-gradient-2 {
-    margin-top: 130px;
+    margin-top: 160px;
     height: 820px;
 }
 
-
-
-
-
-.section-player h3 {
-    margin-top: 50px;
+main .container .centered-content {
+    max-width: 60vw;
+    margin: auto;
 }
 
-.section-text-2 {
-    padding: 30px;
-}
-
-.section-about {
-    padding: 80px;
-    width: 150vw;
-    margin-top: 80px;
-}
-
-.section-about ul {
-    padding-top: 2px;
-    list-style: square;
-}
-
-.section-about li {
-    font-weight: 300;
-    font-size: 18px;
-    margin: 10px;
-    padding: 2px;
-}
-
-
-.msg-content-2 {
-    position: absolute;
-    margin-top: 15px;
-}
-
-.svg-imag,
-.link {
+main .container .centered-content .main-text {
     text-align: center;
 }
 
-.section-text-2 ol {
-    padding-top: 2px;
+main .container .centered-content .main-text hr {
+    background-image: -webkit-linear-gradient(left, #2b2b2b, #DE2F2F, #2b2b2b);
+    background-image: -moz-linear-gradient(left, #2b2b2b, #DE2F2F, #2b2b2b);
+    background-image: -ms-linear-gradient(left, #2b2b2b, #DE2F2F, #2b2b2b);
+    background-image: -o-linear-gradient(left, #2b2b2b, #DE2F2F, #2b2b2b);
 }
 
-.section-text-2 li {
+main .container .centered-content .main-text p {
+    padding: 0px 30px 10px 30px;
+    margin-bottom: 40px;
+}
+
+main .container .centered-content .player-content .impact-text {
+    margin-top: 60px;
+}
+
+main .container .list-content {
+    margin-right: 20px;
+}
+
+main .container .list-content hr{
+    background-image: -webkit-linear-gradient(left, #DE2F2F, #DE2F2F, #DE2F2F, #2b2b2b);
+    background-image: -moz-linear-gradient(left, #DE2F2F, #DE2F2F, #DE2F2F, #2b2b2b);
+    background-image: -ms-linear-gradient(left, #DE2F2F, #DE2F2F, #DE2F2F, #2b2b2b);
+    background-image: -o-linear-gradient(left, #DE2F2F, #DE2F2F, #DE2F2F, #2b2b2b);
+}
+
+main .container .list-content .list-itens {
+    margin-top: 40px;
+}
+
+main .container .list-content .list-itens .list-item {
     font-weight: 300;
-    font-size: 18px;
     text-align: justify;
     padding: 2px;
+    margin-top: 18px;
 }
 
-.sub-title {
-    font-size: 13px;
+main .svg-item-gradient-3 {
+    margin-top: 160px;
+    height: 760px;
 }
 
-.list {
+main .container .pc-2 {
+    padding: 20px;
+    margin-top: 200px;
+}
+
+main .container .pc-2 .impact-text {
+    margin-top: 60px;
+}
+
+main .container .centered-content .main-text .wrapper {
+    display: grid;
+    padding: 10px 50px 50px;
+    grid-auto-columns: minmax(150px, auto);
+    grid-row-gap: 3em;
+    grid-template-columns: repeat(3, 1fr);
+    border: solid 2px var(--red);
+    border-radius: 10px;
+}
+
+main .container .centered-content .main-text .impact-text {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+main .container .centered-content .main-text .impact-text a {
+    font-family: var(--Manrope);
+    font-size: 16px;
+    padding: 8px;
+    font-weight: 500;
+    text-decoration: double;
+    text-transform: uppercase;
+    transition: 200ms;
+}
+
+main .container .centered-content .main-text .impact-text a:hover {
+    text-decoration: underline;
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 3px;
+    transition: 200ms;
+}
+
+footer {
+    padding: 80px;
+}
+
+footer .footer-content {
+    max-width: 60vw;
+    margin: auto;
+    text-align: center;
+}
+
+footer .footer-content  span {
+    color: #b9b9b9;
+    font-size: 15px;
+}
+
+footer .footer-content  span a {
+    text-decoration: underline;
+}
+
+footer .footer-content hr {
+    margin-top: 20px;
+    height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #1f1f1f inset;
+}
+
+footer .footer-content a {
     margin-top: 15px;
 }
 
-.section-player-2 {
-    padding: 30px;
-    margin-top: 230px;
-    text-align: center;
-}
+
